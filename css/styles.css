@@ -1,4 +1,4 @@
-/* CSS FROM STARTBOOTSTRAP.COM TEMPLATE */
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -895,7 +895,7 @@ pre {
     max-width: 58.3333333333%; }
   .col-lg-8 {
     flex: 0 0 66.6666666667%;
-    max-width: 66.6666666667%; }
+    max-width: 40%; }
   .col-lg-9 {
     flex: 0 0 75%;
     max-width: 75%; }
@@ -1720,7 +1720,7 @@ fieldset:disabled a.btn {
   pointer-events: none; }
 
 .btn-primary {
-  color: #212529;
+  color: #ff0000;
   background-color: #c9bfae;
   border-color: #c9bfae; }
   .btn-primary:hover {
@@ -4134,17 +4134,29 @@ a.close.disabled {
     .modal-dialog-centered.modal-dialog-scrollable::before {
       content: none; }
 
-.modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 0 solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.75rem;
-  outline: 0; }
+      .modal-content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        width: auto; /* Auto width to fit content */
+        min-width: 44vh; /* Ensures it follows 9:16 ratio */
+        height: 80vh; /* Slightly larger, keeping 9:16 */
+        max-width: 55vw; /* Prevents it from getting too wide */
+        max-height: 90vh; /* Prevents overflow */
+        overflow: auto; /* Enables scrolling if needed */
+        padding: 1.5rem; /* Adjust padding for better content fit */
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 0 solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.75rem;
+        outline: 0;
+      }
+      
+      
 
 .modal-backdrop {
   position: fixed;
@@ -5626,9 +5638,11 @@ button.bg-dark:focus {
 .mx-5 {
   margin-right: 3rem !important; }
 
-.mb-5,
+.mb-5{
+  font-size: 18px;
+}
 .my-5 {
-  margin-bottom: 3rem !important; }
+  margin-bottom: 2rem !important; }
 
 .ml-5,
 .mx-5 {

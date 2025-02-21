@@ -16,7 +16,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #e7e2d3; }
 hr {
   box-sizing: content-box;
   height: 0;
@@ -71,7 +71,7 @@ a {
   text-decoration: none;
   background-color: transparent; }
   a:hover {
-    color: #aa9b80;
+    color: #2080ff;
     text-decoration: underline; }
 
 a:not([href]) {
@@ -1745,11 +1745,11 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #54799a;
-  border-color: #54799a; }
+  background-color: #536854;
+  border-color: #536854; }
   .btn-secondary:hover {
     color: #fff;
-    background-color: #476681;
+    background-color: #536854;
     border-color: #425f79; }
   .btn-secondary:focus, .btn-secondary.focus {
     color: #fff;
@@ -1758,8 +1758,8 @@ fieldset:disabled a.btn {
     box-shadow: 0 0 0 0.2rem rgba(110, 141, 169, 0.5); }
   .btn-secondary.disabled, .btn-secondary:disabled {
     color: #fff;
-    background-color: #54799a;
-    border-color: #54799a; }
+    background-color: #536854;
+    border-color: #536854; }
   .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
     color: #fff;
     background-color: #425f79;
@@ -1931,21 +1931,21 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(201, 191, 174, 0.5); }
 
 .btn-outline-secondary {
-  color: #54799a;
-  border-color: #54799a; }
+  color: #536854;
+  border-color: #536854; }
   .btn-outline-secondary:hover {
     color: #fff;
-    background-color: #54799a;
-    border-color: #54799a; }
+    background-color: #536854;
+    border-color: #536854; }
   .btn-outline-secondary:focus, .btn-outline-secondary.focus {
     box-shadow: 0 0 0 0.2rem rgba(84, 121, 154, 0.5); }
   .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
-    color: #54799a;
+    color: #536854;
     background-color: transparent; }
   .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
     color: #fff;
-    background-color: #54799a;
-    border-color: #54799a; }
+    background-color: #536854;
+    border-color: #536854; }
     .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-secondary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(84, 121, 154, 0.5); }
 
@@ -2891,6 +2891,7 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
+  
 
 .nav-link {
   display: block;
@@ -3422,7 +3423,7 @@ input[type="button"].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: #e9efea;
   border-radius: 0.5rem; }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -3557,7 +3558,7 @@ input[type="button"].btn-block {
 
 .badge-secondary {
   color: #fff;
-  background-color: #54799a; }
+  background-color: #536854; }
   a.badge-secondary:hover, a.badge-secondary:focus {
     color: #fff;
     background-color: #425f79; }
@@ -4647,7 +4648,7 @@ button.bg-primary:focus {
   background-color: #b5a78f !important; }
 
 .bg-secondary {
-  background-color: #54799a !important; }
+  background-color: #536854 !important; }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
@@ -4742,7 +4743,7 @@ button.bg-dark:focus {
   border-color: #c9bfae !important; }
 
 .border-secondary {
-  border-color: #54799a !important; }
+  border-color: #536854 !important; }
 
 .border-success {
   border-color: #28a745 !important; }
@@ -6972,7 +6973,7 @@ a.text-primary:hover, a.text-primary:focus {
   color: #aa9b80 !important; }
 
 .text-secondary {
-  color: #54799a !important; }
+  color: #536854 !important; }
 
 a.text-secondary:hover, a.text-secondary:focus {
   color: #395269 !important; }
@@ -7127,15 +7128,15 @@ h3 {
     width: 100%;
     max-width: 7rem;
     height: 0.25rem;
-    background-color: #54799a;
+    background-color: #536854;
     border-radius: 1rem;
-    border-color: #54799a !important; }
+    border-color: #536854 !important; }
     .divider-custom .divider-custom-line:first-child {
       margin-right: 1rem; }
     .divider-custom .divider-custom-line:last-child {
       margin-left: 1rem; }
   .divider-custom .divider-custom-icon {
-    color: #54799a !important;
+    color: #536854 !important;
     font-size: 2rem; }
   .divider-custom.divider-light .divider-custom-line {
     background-color: #fff; }
@@ -7313,7 +7314,7 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #54799a;
+  background-color: #536854;
   color: #fff; }
 
 .copyright {
@@ -7351,3 +7352,67 @@ form .row:first-child .floating-label-form-group {
 
 .btn-social {
   margin-bottom: 0.5rem; }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust the gap for better spacing */
+    justify-content: center; /* Center align the images */
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999; /* Ensures the lightbox is on top of everything else */
+  flex-direction: column;
+  text-align: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  z-index: 10; /* Image sits below the close button */
+  position: relative;
+}
+
+.lightbox .caption {
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10; /* Caption sits below the close button */
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 0;  /* Position the close button at the top of the image */
+  right: 0;  /* Position the close button at the right side of the image */
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 20; /* Ensure the close button is on top of the image */
+  user-select: none;
+  padding: 10px;
+}

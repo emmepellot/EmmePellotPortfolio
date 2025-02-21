@@ -6,8 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Portfolio</title>
-        <!-- Font Awesome icons (free version)-->
+        <title>Emme Pellot Portfolio</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet">
@@ -21,9 +20,9 @@
                 <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">My Portfolio</a>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a>
                         </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About Me</a>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#photography">Photography</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact Me</a>
                         </li>
@@ -41,14 +40,22 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0">Web Design Student </p>
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0"></p>
             </div>
+                            <!-- About Section Content-->
+                            <div class="text-center">
+                                <div class="page-section-heading">
+                                    <p class="pre-wrap">Hi! My name is Emme, and I am soon to be a graduate from UCF with a major in Digital Media and a minor in Mass Media.<br><br> Throughout my studies, I have developed skills in JavaScript, HTML, and CSS, and a great understanding of user experience and accessibility. 
+                                        <br>Here is an overview of my recent projects and skills!
+                                </div>
+                            </div>
+                        </div>
         </header>
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">My Portfolio</h2>
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Projects</h2>
                 </div>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
@@ -190,27 +197,39 @@
             </div>
         </div>
 
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block text-white">About Me</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ml-auto">
-                        <p class="pre-wrap lead">My name is Emme Pellot and I am a Web Design student at UCF. I have learned HTML, CSS, and Javascript.</p>
-                    </div>
-                    <div class="col-lg-4 mr-auto">
-                        <p class="pre-wrap lead">This website is a home for some of my recent projects to display my skills. </p>
-                    </div>
-                </div>
+
+           <!-- Photography Section -->
+           <section class="page-section bg-primary text-white mb-0" id="photography">
+            <div class="text-center">
+                <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Photography</h2>
             </div>
-        </section>
+                    <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class="gallery">
+            <img src="assets/img/portfolio/pelican2.jpg" alt="Pelican closeup" data-caption=" New Smyrna Beach, FL Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
+            <img src="assets/img/portfolio/chicago2.jpg" alt="Chicago lakefront aerial view" data-caption="Chicago, IL Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
+            <img src="assets/img/portfolio/canyon2.jpg" alt = "Navajo Loop Trail in Bryce Canyon National Park" data-caption="Bryce Canyon National Park, UT Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
+            <img src="assets/img/portfolio/A6700691-Enhanced-NR.jpg" alt="Carnival game booth at night" data-caption="Islands of Adventure, FL Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
+            <img src="assets/img/portfolio/A6701577-Enhanced-NR.jpg" alt="Beach house at sunset" data-caption="Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
+            <img src="assets/img/portfolio/A6700139.jpg" alt="Yorkshire Terrier playing with a ball" data-caption="Teacup Yorkie Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
+            <img src="assets/img/portfolio/IMG_6855.jpg" alt="Coast of Ireland" data-caption="Moher Cliffs, Ireland Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
+            <img src="assets/img/portfolio/DSC_0197.jpg" alt="Zebra Longwing Butterfly on a bush" data-caption="Zebra Longwing Butterfly Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
+            <img src="assets/img/portfolio/A6700542.jpg" alt="Hogwarts Express conductor waving" data-caption="Harry Potter World, Universal Orlando on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
+
+        </div>
+    </div>
+           </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" src="" alt="Expanded view">
+    </div>
+
+    <script src="scripts.js"></script>
+
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->

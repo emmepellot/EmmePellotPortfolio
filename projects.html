@@ -77,14 +77,23 @@
       height: auto; /* Maintain aspect ratio */
       margin: 0 auto;
     }
-
-    /* Media query for responsive behavior */
+    
     @media (max-width: 768px) {
-      .landscape-img {
-        width: 100%; /* Full width on smaller screens */
-        max-width: 1000px; /* Set a max-width for smaller screens */
-      }
-    }
+  .project-container {
+    flex-direction: column !important; /* Stack images and text on smaller screens */
+    text-align: center;
+  }
+
+  .project-container img {
+    width: 80%; /* Increase the image size */
+    max-width: 300px; /* Adjust maximum width for better visibility */
+  }
+
+  .project-description {
+    padding: 15px;
+    text-align: center;
+  }
+}
 
     /* Add a new class to the landscape-container to make it staggered */
     .landscape-container:nth-child(odd) {

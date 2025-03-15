@@ -100,13 +100,21 @@
         }
         @media (max-width: 480px) {
     .profile-img {
-        width: 90vw; /* Almost full width */
-        height: 90vw;
-        max-width: 300px; /* Allows it to scale but prevents extreme sizes */
-        max-height: 300px;
+        width: 70vw; /* Increase width relative to screen size */
+        height: 70vw;
+        max-width: 350px; /* Set a higher max width */
+        max-height: 350px;
     }
 }
 
+@media (max-width: 768px) {
+    .profile-img {
+        width: 50vw;
+        height: 50vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
     </style>
 </head>
 <body>

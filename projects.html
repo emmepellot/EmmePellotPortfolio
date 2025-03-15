@@ -159,6 +159,45 @@ body {
   background-color: #333; /* Dark color for clarity */
   width: 50%; /* Set the width to be 50% of the container */
   margin: 40px auto; /* Center the line horizontally with auto margin */
+}/* Make carousel arrows black */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Set arrow color to black */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #333; /* Darken the arrow color on hover */
+}
+.carousel-control-next {
+  right: 210px; /* Adjust this value to move the arrow closer to the image */
+}
+
+.carousel-control-prev {
+  left: -50px; /* Adjust this value to move the left arrow closer to the image */
+}
+.carousel-control-next {
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 992px) { /* Adjust for tablets */
+  .carousel-control-prev {
+    left: 5vw; /* Adjust positioning */
+  }
+  .carousel-control-next {
+    right: 5vw;
+  }
+}
+
+@media (max-width: 768px) { /* Adjust for mobile screens */
+  .carousel-control-prev {
+    left: 2vw;
+  }
+  .carousel-control-next {
+    right: 2vw;
+  }
 }
   </style>
 </head>
@@ -263,6 +302,37 @@ body {
             <!-- Graphic 2 -->
             <div class="project-container" data-aos="fade-right">
               <div class="col-md-6">
+                 <!-- Carousel for Fyre Images -->
+          <div id="fyreCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- First Item -->
+              <div class="carousel-item active">
+                <img src="assets/graphics/fyre all.png" class="d-block w-100" alt="Fyre Image 1">
+              </div>
+              <!-- Second Item -->
+              <div class="carousel-item">
+                <img src="assets/graphics/fyre.png" class="d-block w-100" alt="Fyre Image 2">
+              </div>
+              <!-- Third Item -->
+              <div class="carousel-item">
+                <img src="assets/graphics/fyre lime.png" class="d-block w-100" alt="Fyre Image 3">
+              </div>
+              <!-- Fourth Item -->
+              <div class="carousel-item">
+                <img src="assets/graphics/fyre arctic.png" class="d-block w-100" alt="Fyre Image 4">
+              </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#fyreCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#fyreCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
                 <img src="assets/graphics/fyre all.png" alt="Graphic Image 2">
               </div>
               <div class="col-md-6 project-description">

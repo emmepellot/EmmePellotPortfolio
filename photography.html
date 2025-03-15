@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- AOS for animation on scroll -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+        cursor: none;
+      font-family: "Coolvetica";
+      background-color: #f8f9fa;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-top: 100px; /* Account for fixed navbar */
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333;
+      text-transform: uppercase;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .photo-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer; /* Make it look clickable */
+    }
+
+    .photo-item:hover img {
+      transform: scale(1.1); /* Slight zoom effect */
+    }
+
+    .photo-description {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .photo-item:hover .photo-description {
+      visibility: visible;
+      opacity: 1;
+    }
+    @font-face {
+            font-family:'MODERNIZ';
+            src: url('assets/Moderniz.otf');
+        }
+        @font-face {
+            font-family:'Coolvetica';
+            src: url('assets/Coolvetica.otf');
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, #536854, #2e4d38);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.2rem;
+            color: white;
+            padding: 15px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #000000; 
+        }
+        .navbar-brand {
+            color:white;
+        }
+        .cursor {
+  position: absolute;
+  width: 30px; /* Adjust the size */
+  height: 30px; /* Adjust the size */
+  background-color: #536854; /* Custom color */
+  border-radius: 50%; /* Circular shape */
+  pointer-events: none; /* So it doesn't interfere with clicks */
+  transform: translate(-50%, -50%); /* Center the cursor on the mouse */
+  transition: all 0.05s ease; /* Faster transition */
+  z-index: 9999;
+}
+
+.cursor-hover {
+  transform: translate(-50%, -50%) scale(1.2); /* Less scaling effect */
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html" style="font-family: Coolvetica;">EP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto" style="font-family: Coolvetica;">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div class="container my-5">
+    <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;">Photography</div>
+
+    <div class="gallery-container">
+      <!-- Photo 1 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/pelican2.jpg" alt="Photo 1" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/pelican2.jpg', 'Pelican', 'Pelican closeup, New Smyrna Beach, Florida, Shot on Sony A6700.')">
+        <div class="photo-description">
+          <h5>Pelican</h5>
+        </div>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/canyon2.jpg" alt="Photo 2" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/canyon2.jpg', 'Canyon', 'Bryce Canyon National Park, Shot on Sony A6700.')">
+        <div class="photo-description">
+          <h5>Wall Street, Bryce Canyon</h5>
+        </div>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/img/DSC_0197.jpg" alt="Photo 3" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/DSC_0197.jpg', 'Butterfly', 'A butterfly in the wild, Shot on Nikon D3400.')">
+        <div class="photo-description">
+          <h5>Butterfly</h5>
+        </div>
+      </div>
+
+      <!-- Photo 4 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="400">
+        <img src="assets/img/A6700542.jpg" alt="Photo 4" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/A6700542.jpg', 'Conductor', 'Hogwarts, Islands of Adventure, Shot on Sony A6700.')">
+        <div class="photo-description">
+          <h5>Hogwarts Express Conductor</h5>
+        </div>
+      </div>
+
+      <!-- Photo 5 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="500">
+        <img src="assets/img/A6700139.jpg" alt="Photo 5" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/A6700139.jpg', 'Yorkie', 'A dog playing with a ball, Shot on Sony A6700.')">
+        <div class="photo-description">
+          <h5>Yorkie</h5>
+        </div>
+      </div>
+
+      <!-- Photo 6 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="600">
+        <img src="assets/img/A6701577-Enhanced-NR.jpg" alt="Photo 6" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/A6701577-Enhanced-NR.jpg', 'Beach House', 'Beach House at dusk, Shot on Sony A6700.')">
+        <div class="photo-description">
+          <h5>Beach House</h5>
+        </div>
+      </div>
+
+      <!-- Photo 7 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="700">
+        <img src="assets/img/city2.jpg" alt="Photo 7" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/city2.jpg', 'City', 'Chicago, Illinois, Shot on Sony A6700.')">
+        <div class="photo-description">
+          <h5>Chicago Riverwalk</h5>
+        </div>
+      </div>
+
+      <!-- Photo 8 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="800">
+        <img src="assets/img/sunset.jpg" alt="Photo 8" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/sunset.jpg', 'Beach', 'New Smyrna Beach, Florida, Shot on Sony A6700.')">
+        <div class="photo-description">
+          <h5>Beach Sunset</h5>
+        </div>
+      </div>
+
+      <!-- Photo 9 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="900">
+        <img src="assets/img/IMG_6857-2.jpg" alt="Photo 9" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/IMG_6857-2.jpg', 'Cliffs', 'The Cliffs of Moher, Ireland, Shot on Sony A6700.')">
+        <div class="photo-description">
+          <h5>Cliffs of Moher, Ireland</h5>
+        </div>
+      </div>
+
+      <!-- Photo 10 -->
+      <div class="photo-item" data-aos="fade-up" data-aos-delay="1000">
+        <img src="assets/img/thor.jpg" alt="Photo 10" data-bs-toggle="modal" data-bs-target="#photoModal" onclick="openModal('assets/img/thor.jpg', 'Rock Formation', 'Bryce Canyon National Park, Shot on Sony A6700.')">
+        <div class="photo-description">
+          <h5>Thor's Hammer, Bryce Canyon</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="photoModalLabel">Photo Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" id="modalImage" class="img-fluid" alt="Expanded Photo">
+          <p id="modalDescription"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS for animations -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+
+    function openModal(imageUrl, title, description) {
+      document.getElementById('modalImage').src = imageUrl;
+      document.getElementById('photoModalLabel').innerText = title;
+      document.getElementById('modalDescription').innerText = description;
+    }
+    // Create and add the custom cursor element to the page
+const cursor = document.createElement('div');
+cursor.classList.add('cursor');
+document.body.appendChild(cursor);
+
+// Set the custom cursor style
+cursor.style.cursor = 'url("path-to-your-cursor-image.png"), auto';  // Use your custom cursor image URL here
+
+// Move the custom cursor with the mouse
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = `${e.pageX}px`;
+  cursor.style.top = `${e.pageY}px`;
+});
+
+// Enlarge the cursor when hovering over clickable elements
+const clickableElements = document.querySelectorAll('a, button, .project-container, .icon-grid i');
+
+clickableElements.forEach((el) => {
+  el.addEventListener('mouseenter', () => {
+    cursor.classList.add('cursor-hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursor-hover');
+  });
+});
+  </script>
+</body>
+</html>

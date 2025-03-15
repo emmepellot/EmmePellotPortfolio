@@ -1,300 +1,200 @@
-<!-- HTML HELP FROM STARTBOOTSTRAP.COM TEMPLATE-->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>Emme Pellot Portfolio</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet">
-        <!-- Fonts CSS-->
-        <link rel="stylesheet" href="css/heading.css">
-        <link rel="stylesheet" href="css/body.css">
-    </head>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-            <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
-                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Projects</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#photography">Photography</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#graphics">Graphics</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact Me</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5">
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading mb-0">Emme Pellot</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0"></p>
-            </div>
-                            <!-- About Section Content-->
-                            <div class="text-center">
-                                <div class="page-section-heading">
-                                    <p class="pre-wrap">Hi! My name is Emme, and I am soon to be a graduate from UCF with a major in Digital Media and a minor in Mass Media.<br><br> Throughout my studies, I have developed skills in JavaScript, HTML, and CSS, and a great understanding of user experience and accessibility. 
-                                        <br>Here is an overview of my recent projects and skills!
-                                </div>
-                            </div>
-                        </div>
-        </header>
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Projects</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Items-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="assets/img/portfolio/FILTERINGAPP.png" alt="Filtering App"/>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                        </div><img class="img-fluid" src="assets/img/portfolio/quizApp.png" alt="Quiz App"/>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="assets/img/portfolio/exerciseApp.png" alt="Exercise App"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Emme Pellot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'SB Body', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+            text-align: center;
+            cursor: none; /* Hide the default cursor */
+        }
+        .hero {
+            background: #f8f9fa;
+            padding: 50px 20px;
+            margin-top: 70px;
+        }
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 10px;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, #536854, #2e4d38);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.2rem;
+            color: white;
+            padding: 15px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #000000;
+        }
+        .navbar-brand {
+            color:white;
+        }
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            justify-items: center;
+        }
+        .icon-grid i {
+            font-size: 3rem;
+            color: #536854;
+            transition: transform 0.3s ease;
+        }
+        .icon-grid i:hover {
+            transform: scale(1.1);
+            color: #2e4d38;
+        }
+        .icon-label {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+        @font-face {
+            font-family:'MODERNIZ';
+            src: url('assets/Moderniz.otf');
+        }
+        @font-face {
+            font-family:'Coolvetica';
+            src: url('assets/Coolvetica.otf');
+        }
+        .cursor {
+            position: absolute;
+            width: 30px; /* Adjust the size */
+            height: 30px; /* Adjust the size */
+            background-color: #536854; /* Custom color */
+            border-radius: 50%; /* Circular shape */
+            pointer-events: none; /* So it doesn't interfere with clicks */
+            transform: translate(-50%, -50%); /* Center the cursor on the mouse */
+            transition: all 0.05s ease; /* Faster transition */
+            z-index: 9999;
+        }
 
-
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="assets/img/portfolio/carinventoryapp.png" alt="Car Inventory App"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio Modal-->
-        <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Filtering App</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <p class="mb-3">This app creates a menu of names in which you can add new items to the menu, and then filter the menu by character. This app was created using React Native. </p>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/gifs/menu.gif" alt="Name Filtering App"/>
-                                    <!-- Portfolio Modal - Text-->
-
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Quiz App</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <p class="mb-3">For this app, I created a 3 question quiz using React Native that supports three types of answers.
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/gifs/phones-ezgif.com-resize (2).gif" alt="3 Question Quiz App"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal2Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Exercise App</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <p class="mb-3">This is an exercise app I created using React Native components such as FlatList and Navigation Stack.</p>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/gifs/ezgif.com-crop.gif" alt="Exercise App"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal3Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Quiz App</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <p class="mb-3">This is a car inventory app made in JavaScript. It allows the user to enter types of cars and calculate the total price of all of them.</p>
-                                    <!-- Portfolio Modal - Gif --><img class="img-fluid rounded mb-5" src="assets/gifs/carvid1-ezgif.com-crop.gif" alt="Car Inventory App"/>
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-           <!-- Photography Section -->
-           <section class="page-section bg-primary text-white mb-0" id="photography">
-            <div class="text-center">
-                <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Photography</h2>
-            </div>
-                    <!-- Icon Divider-->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-        </div>
-        <div class="gallery">
-            <img src="assets/img/portfolio/pelican2.jpg" alt="Pelican closeup" data-caption=" New Smyrna Beach, FL Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-            <img src="assets/img/portfolio/chicago2.jpg" alt="Chicago lakefront aerial view" data-caption="Chicago, IL Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-            <img src="assets/img/portfolio/canyon2.jpg" alt = "Navajo Loop Trail in Bryce Canyon National Park" data-caption="Bryce Canyon National Park, UT Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-            <img src="assets/img/portfolio/A6701577-Enhanced-NR.jpg" alt="Beach house at sunset" data-caption="Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-            <img src="assets/img/portfolio/A6700542.jpg" alt="Hogwarts Express conductor waving" data-caption="Harry Potter World, Universal Orlando on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-            <img src="assets/img/portfolio/A6700139.jpg" alt="Yorkshire Terrier playing with a ball" data-caption="Teacup Yorkie Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-            <img src="assets/img/portfolio/DSC_0197.jpg" alt="Zebra Longwing Butterfly on a bush" data-caption="Zebra Longwing Butterfly Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-            <img src="assets/img/portfolio/A6701982 copy.jpg" alt = "Inspiration Point Bryce Canyon National Park" data-caption="Bryce Canyon National Park, UT Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-            <img src="assets/img/portfolio/IMG_6855.jpg" alt="Coast of Ireland" data-caption="Moher Cliffs, Ireland Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-            <img src="assets/img/portfolio/A6700691-Enhanced-NR.jpg" alt="Carnival game booth at night" data-caption="Islands of Adventure, FL Shot on Sony A6700, Sigma 18-50mm f/2.8" onclick="openLightbox(this.src)">
-
-        </div>
-    </div>
-           </section>
-
-
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <span class="close" onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-image" src="" alt="Expanded view">
-    </div>
-
-    <section class="page-section portfolio" id="graphics">
+        .cursor-hover {
+            transform: translate(-50%, -50%) scale(1.2); /* Less scaling effect */
+        }
+                /* Custom button style */
+                .btn-success {
+            background-color: #536854; /* Green color matching navbar */
+            border-color: #536854;
+        }
+        .btn-success:hover {
+            background-color: #2e4d38; /* Darker green for hover effect */
+            border-color: #2e4d38;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <!-- Portfolio Section Heading-->
-            <div class="text-center">
-                <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Graphics</h2>
+            <a class="navbar-brand" href="index.html" style="font-family: Coolvetica;">EP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" style="font-family: Coolvetica;">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="photography.html">Photography</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-            </div>
-            <div class="gallery">
-                <img src="assets/img/portfolio/currygraphic.png" alt="Steph Curry Poster" data-caption="Steph Curry Team USA graphic" onclick="openLightbox(this.src)">
-                <img src="assets/img/portfolio/nationalgeo.png" alt="Nat Geo Remake" data-caption="Remake of National Geographic, photo by me" onclick="openLightbox(this.src)">
-                <img src="assets/img/portfolio/chappell.png" alt="Chappell Roan graphic" data-caption="Chappell Roan graphic" onclick="openLightbox(this.src)">
-            </div> <!-- This closing div was missing -->
-        </div> <!-- This closing div was missing -->
-     </section>
-     
+        </div>
+    </nav>
 
-    <script src="scripts.js"></script>
+    <header class="hero" style="font-family: MODERNIZ;">
+        <h1>Hi, my name is Emme Pellot</h1>
+        <p style="font-family: Coolvetica; font-size: 20px;">I'm a Digital Media Student with a focus on branding and creative design, driven by a passion for storytelling and visual communication.</p>
+        <img src="assets/gifemme4.gif" alt="Your Photo" class="profile-img">
+    </header>
+    
+    <section id="about" class="container my-5">
+        <h2 style="font-family: MODERNIZ;">About Me</h2>
+        <p style="font-family: Coolvetica; font-size: 20px;">I am a Digital Media student graduating in May 2024 with a minor in Mass Media. I have a strong passion for creating and editing all types of content, and I thrive in environments where I can blend creativity with technical skills. <br>With experience in web development (HTML, CSS, JS, React, Python), graphic design (Adobe Photoshop,Adobe Lightroom, Figma, Canva), combined with video editing (Davinci Resolve, CapCut) and the technical skills to build my own PC, I bring a versatile skill set to the table.</p>
+        
+        <div class="icon-grid">
+            <!-- Web Development Icons -->
+            <div>
+                <i class="fab fa-html5"></i>
+                <div class="icon-label">HTML</div>
+            </div>
+            <div>
+                <i class="fab fa-css3-alt"></i>
+                <div class="icon-label">CSS</div>
+            </div>
+            <div>
+                <i class="fab fa-js"></i>
+                <div class="icon-label">JavaScript</div>
+            </div>
+            <div>
+                <i class="fab fa-react"></i>
+                <div class="icon-label">React</div>
+            </div>
+            <!-- Design Icons -->
+            <div>
+                <i class="fas fa-paint-brush"></i>
+                <div class="icon-label">Adobe</div>
+            </div>
+            
+            <div>
+                <i class="fab fa-figma"></i>
+                <div class="icon-label">Figma</div>
+            </div>
+            <!-- Video Editing Icons -->
+            <div>
+                <i class="fas fa-video"></i>
+                <div class="icon-label">Video Editing</div>
+            </div>
+        </div>
+        
+        <!-- Resume Link Section -->
+        <div class="mt-5">
+            <h3 style="font-family: MODERNIZ;">My Resume:</h3>
+            <a href="https://docs.google.com/document/d/1B6GEPWF9PwMsbQVYRq9CxB3txjbKZH9s/edit" target="_blank" class="btn btn-success">Click Here to View!</a>
+        </div>
+    </section>
+    
+    <footer class="bg-dark text-light py-3"></footer>
 
-        <section class="page-section bg-secondary text-white mb-0" id="contact">
-            <div class="container">
-                <!-- Contact Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-primary mb-0 d-inline-block">Contact Me</h2>
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Contact Section Content-->
-                <div class="row justify-content-center">
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-column align-items-center">
-                            <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
-                            <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:em483388@ucf.edu">em483388@ucf.edu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                </div>
-            </div>
-        </footer>
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-        <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+    <script>
+        // Create and add the custom cursor element to the page
+        const cursor = document.createElement('div');
+        cursor.classList.add('cursor');
+        document.body.appendChild(cursor);
+
+        // Move the custom cursor with the mouse
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+
+        // Enlarge the cursor when hovering over clickable elements
+        const clickableElements = document.querySelectorAll('a, button, .icon-grid i');
+
+        clickableElements.forEach((el) => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+            });
+        });
+    </script>
+</body>
 </html>

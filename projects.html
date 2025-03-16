@@ -159,7 +159,8 @@ body {
   background-color: #333; /* Dark color for clarity */
   width: 50%; /* Set the width to be 50% of the container */
   margin: 40px auto; /* Center the line horizontally with auto margin */
-}/* Make carousel arrows black */
+}
+/* Make carousel arrows black */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: black; /* Set arrow color to black */
@@ -226,7 +227,12 @@ body {
   </nav>
 
   <div class="container my-5">
-    <div class="section-header" style="font-family: MODERNIZ;">Projects & Graphics </div>
+    <!-- Clickable Projects & Graphics Title -->
+    <div class="section-header" style="font-family: MODERNIZ;">
+      <a href="#graphics-section" style="text-decoration: none; color: inherit;">
+        Projects & Graphics
+      </a>
+    </div>
     
       <!-- Plannify Project (first) -->
       <div class="project-container" data-aos="fade-up">
@@ -246,7 +252,7 @@ body {
         </div>
         <div class="col-md-6 project-description">
           <h3>"The Daily Mail" Website Redesign</h3>
-          <p>I created a new mockup of The Daily Mail website in Figma with the inclusion of an accessibility toolbar, and overall less information overload. The purpose of this project was to make changes to a website that is not accessible to all.</p>
+          <p>I created a renovated mockup of The Daily Mail in Figma with the inclusion of an accessibility toolbar and overall less information overload. The purpose of this project was to make changes to a website that is not accessible to all.</p>
         </div>
       </div>
     
@@ -284,7 +290,7 @@ body {
       </div>
 
     </div>
-    <div class="container my-5">
+    <div id= "graphics-section" class="container my-5">
       <!-- Spacer Line -->
       <hr class="graphics-line">
     </div>
@@ -298,11 +304,9 @@ body {
           <p>I redesigned the cover of the game Madden 25 featuring Christian McCaffrey using Adobe Photoshop.</p>
         </div>
       </div>
-
-            <!-- Graphic 2 -->
-            <div class="project-container" data-aos="fade-right">
-              <div class="col-md-6">
-                 <!-- Carousel for Fyre Images -->
+      <div class="project-container" data-aos="fade-right">
+        <div class="col-md-6">
+          <!-- Carousel for Fyre Images -->
           <div id="fyreCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <!-- First Item -->
@@ -332,12 +336,12 @@ body {
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-              <div class="col-md-6 project-description">
-                <h3>"Fyre" Energy Drink Concept</h3>
-                <p>I created a design concept for a new energy drink brand with three flavors in Adobe Photoshop. "Fyre" is a modern take on energy drinks with a bold identity. Designed to attract a crowd who moves with purpose, the brand embodies momentum and "fyre power".</p>
-              </div>
-            </div>
-    
+        </div>
+        <div class="col-md-6 project-description">
+          <h3>"Fyre" Energy Drink Concept</h3>
+          <p>I created a design concept for a new energy drink brand with three flavors in Adobe Photoshop. "Fyre" is a modern take on energy drinks with a bold identity. Designed to attract a crowd who moves with purpose, the brand embodies momentum and "fyre power".</p>
+        </div>
+      </div>
       <!-- Graphic 2 -->
       <div class="project-container" data-aos="fade-left">
         <div class="col-md-6">

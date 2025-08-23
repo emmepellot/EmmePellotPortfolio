@@ -26,6 +26,24 @@
       color: #333;
       text-transform: uppercase;
     }
+    .main-header {
+    text-align: center;
+    margin-top: 100px; /* Account for fixed navbar */
+    margin-bottom: 10px;
+    font-size: 3.5rem; /* Larger than section-header */
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    }
+
+    .sub-header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 1.8rem; /* Smaller than main header */
+    font-weight: bold;
+    color: #555;
+    }
 
     .photo-item {
       position: relative;
@@ -139,9 +157,13 @@
     </div>
   </nav>
 
-  <div class="container my-5">
-    <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;text-decoration: underline;">Media</div>
-    <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;font-size: 25px;">Photos</div>
+ <div class="container my-5">
+  <div class="main-header" data-aos="fade-down" style="font-family: MODERNIZ;text-decoration: underline;">
+    Media
+  </div>
+  <div class="sub-header" data-aos="fade-down" style="font-family: MODERNIZ;">
+    Photos
+  </div>
 
     <div class="row g-4 justify-content-center">
       <!-- Photo 1 -->
@@ -237,7 +259,9 @@
 
  <!-- Video Section -->
 <div class="container my-5">
-  <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;">Videos</div>
+  <div class="sub-header" data-aos="fade-down" style="font-family: MODERNIZ;">
+    Videos
+  </div>
 
   <div class="row g-4 justify-content-center">
     <!-- Video 1 -->

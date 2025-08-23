@@ -1,265 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Emme Pellot</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: 'SB Body', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-            text-align: center;
-            cursor: none; /* Hide the default cursor */
-        }
-        .hero {
-            background: #f8f9fa;
-            padding: 50px 20px;
-            margin-top: 70px;
-        }
-        .profile-img {
-            width: 170px;
-            height: 170px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-top: 10px;
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(to bottom, #536854, #2e4d38);
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .navbar-nav .nav-link {
-            font-size: 1.2rem;
-            color: white;
-            padding: 15px;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #000000;
-        }
-        .navbar-brand {
-            color:white;
-        }
-        .icon-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-            justify-items: center;
-        }
-        .icon-grid i {
-            font-size: 3rem;
-            color: #536854;
-            transition: transform 0.3s ease;
-        }
-        .icon-grid i:hover {
-            transform: scale(1.1);
-            color: #2e4d38;
-        }
-        .icon-label {
-            margin-top: 10px;
-            font-size: 1rem;
-            color: #333;
-        }
-        @font-face {
-            font-family:'MODERNIZ';
-            src: url('assets/Moderniz.otf');
-        }
-        @font-face {
-            font-family:'Coolvetica';
-            src: url('assets/Coolvetica.otf');
-        }
-        .cursor {
-            position: absolute;
-            width: 30px; /* Adjust the size */
-            height: 30px; /* Adjust the size */
-            background-color: #536854; /* Custom color */
-            border-radius: 50%; /* Circular shape */
-            pointer-events: none; /* So it doesn't interfere with clicks */
-            transform: translate(-50%, -50%); /* Center the cursor on the mouse */
-            transition: all 0.05s ease; /* Faster transition */
-            z-index: 9999;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Emme Pellot</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-        .cursor-hover {
-            transform: translate(-50%, -50%) scale(1.2); /* Less scaling effect */
-        }
-                /* Custom button style */
-                .btn-success {
-            background-color: #536854; /* Green color matching navbar */
-            border-color: #536854;
-        }
-        .btn-success:hover {
-            background-color: #2e4d38; /* Darker green for hover effect */
-            border-color: #2e4d38;
-        }
-        @media (max-width: 480px) {
-    .profile-img {
-        width: 70vw; /* Increase width relative to screen size */
-        height: 70vw;
-        max-width: 350px; /* Set a higher max width */
-        max-height: 350px;
-    }
+<style>
+/* --- GLOBAL --- */
+body {
+  font-family: "Coolvetica", sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  cursor: none;
+  color: #222;
+}
+a { text-decoration:none; }
+section { padding:80px 20px; }
+
+/* --- NAVBAR --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.navbar.scrolled {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  backdrop-filter: blur(20px);
+}
+.navbar-nav .nav-link {
+  font-size: 1.5rem;
+  font-weight:500;
+  color:#333;
+  padding:15px;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover { color:#385e43; }
+.navbar-brand { font-weight:bold; font-family: Coolvetica; font-size:1.5rem; color:#111; }
+
+/* --- HERO --- */
+.hero {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #a0bca3 100%);
+  padding:0 20px;
+  text-align:center;
+}
+.hero-text { flex:1; min-width:280px; padding:20px; }
+.hero-text h1 { font-family: MODERNIZ; font-size:4rem; margin-bottom:20px; }
+.hero-text p { font-size:1.8rem; line-height:1.2; color:#171717; }
+.profile-img {
+  width: 220px;
+  height: 220px;
+  border-radius:50%;
+  object-fit:cover;
+  margin:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.profile-img:hover { transform: scale(1.05); }
+
+/* --- SECTION HEADERS --- */
+.main-header { 
+font-family:"MODERNIZ" ;
+  text-align:center;
+  margin-bottom:60px;
+  font-size:2.8rem;
+  font-weight:700;
+  letter-spacing:1px;
+  position:relative;
+  color:#222;
+}
+.main-header::after {
+  content:"";
+  display:block;
+  width:70px;
+  height:3px;
+  background:#385e43;
+  margin:15px auto 0;
+  border-radius:2px;
+}
+.sub-header { 
+  text-align:center; 
+  margin-bottom:40px; 
+  font-size:1.3rem; 
+  font-weight:500; 
+  color:#385e43;
 }
 
+/* --- ABOUT ME ALTERNATING --- */
+.about-section {
+  max-width:1000px;
+  margin:auto;
+}
+.about-item {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:60px;
+}
+.about-item:nth-child(even) { flex-direction: row-reverse; }
+.about-item-icon {
+  flex:0 0 80px;
+  font-size:2.5rem;
+  color:#385e43;
+  margin:20px;
+}
+.about-item-text {
+  flex:1;
+  min-width:250px;
+  font-size:1.25rem;
+  line-height:1.7;
+  color:#333;
+  padding:10px 20px;
+  background:#f9f9f9;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.about-item-text:hover { transform: translateY(-5px); }
+.about-item-icon img {
+  display:block;
+  width: 120px;
+  height:auto;
+  margin:0 auto;
+}
+
+/* --- ICON GRID --- */
+.icon-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap:25px;
+  justify-items:center;
+  margin-top:30px;
+}
+.icon-item {
+  background:#e8f5e9;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor:pointer;
+}
+.icon-item:hover { transform: scale(1.15); box-shadow:0 10px 20px rgba(0,0,0,0.1); }
+.icon-item i { font-size:2rem; color:#385e43; margin-bottom:8px; }
+.icon-label { font-size:0.9rem; font-weight:500; color:#222; text-align:center; }
+
+/* --- RESUME BUTTON --- */
+.resume-btn {
+  font-size:1.1rem;
+  padding:12px 25px;
+  border-radius:50px;
+  transition: all 0.3s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+.resume-btn:hover { transform: scale(1.05); background:#2e4d38; }
+
+/* --- CUSTOM CURSOR --- */
+.cursor {
+  position:fixed;
+  top:0;
+  left:0;
+  width:28px;
+  height:28px;
+  border:2px solid #385e43;
+  border-radius:50%;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, border-color 0.15s ease;
+  z-index:9999;
+}
+.cursor-hover {
+  transform:translate(-50%,-50%) scale(1.5);
+  border-color:#004d40;
+}
+
+/* --- FOOTER --- */
+footer {
+  background:#f1f1f1;
+  color:#fff;
+  text-align:center;
+  padding:20px 0;
+  margin-top:80px;
+}
+
+/* --- MEDIA --- */
 @media (max-width: 768px) {
-    .profile-img {
-        width: 60vw;
-        height: 60vw;
-        max-width: 350px;
-        max-height: 350px;
-    }
-
-    img {
-        max-width: 90%; /* Ensures all images scale well */
-    }
+  .hero { 
+    flex-direction: column-reverse; 
+    justify-content: center; /* keep content vertically centered */
+    min-height: auto; /* allow height to adjust to content */
+    padding: 60px 20px; /* add top and bottom spacing */
+  }
+  .hero-text h1 { font-size:2.8rem; }
+  .profile-img { width:180px; height:180px; }
+  .about-item { flex-direction:column; }
+  .about-item:nth-child(even) { flex-direction:column; }
+  .about-item-icon { margin-bottom:10px; }
 }
-
-@media (max-width: 480px) {
-    .profile-img {
-        width: 80vw;
-        height: 80vw;
-        max-width: 400px;
-        max-height: 400px;
-    }
-
-    img {
-        max-width: 95%; /* Makes images larger */
-    }
-}
-
-    </style>
+</style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html" style="font-family: Coolvetica;">EP</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto" style="font-family: Coolvetica;">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="photography.html">Media</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <header class="hero" style="font-family: MODERNIZ;">
-        <h1>Hi, my name is Emme Pellot</h1>
-        <p style="font-family: Coolvetica; font-size: 20px;">I'm a Digital Media professional with a focus on videography and marketing, driven by a passion for storytelling and visual communication.</p>
-        <img src="assets/img/emme.JPEG" alt="Your Photo" class="profile-img">
-    </header>
-    
-    <section style="max-width: 800px; margin: auto; padding: 2rem;">
-        <h2 style="text-align: center; font-family: MODERNIZ, sans-serif; font-size: 36px; font-weight: 800; margin-bottom: 1.5rem;">
-          ABOUT ME
-        </h2>
-        <ul style="font-family: Coolvetica, sans-serif; font-size: 22px; list-style: none; padding: 0; line-height: 1.75; color: #222;">
-          <li style="margin-bottom: 1rem; position: relative; padding-left: 2rem;">
-            <span style="position: absolute; left: 0;"></span>
-            I earned my Bachelor’s degree in Digital Media with a minor in Mass Media from the University of Central Florida.
-            I enjoy creating and editing all types of content, blending creativity with technical expertise.
-          </li>
-          <li style="margin-bottom: 1rem; position: relative; padding-left: 1.5rem;">
-            <span style="position: absolute; left: 0;"></span>
-            I independently film and edit various styles of video, managing post-production and color grading. My work has garnered over 8.8 million views on TikTok and was featured on Sony Alpha’s official account.
-          </li>
-          <li style="margin-bottom: 1rem; position: relative; padding-left: 1.5rem;">
-            <span style="position: absolute; left: 0;"></span>
-            I am experienced in web development and I am well-versed in graphic design tools.
-            I built my own PC, reflecting both technical knowledge and a love for hands-on problem solving.
-          </li>
-          <li style="margin-bottom: 1rem; position: relative; padding-left: 1.5rem;">
-            <span style="position: absolute; left: 0;"></span>
-            My love for sports and travel keeps me creatively inspired and always growing in the media world.
-          </li>
-        </ul>
-      </section>
-          
-        <div class="icon-grid">
-            <!-- Web Development Icons -->
-            <div>
-                <i class="fab fa-html5"></i>
-                <div class="icon-label">HTML</div>
-            </div>
-            <div>
-                <i class="fab fa-css3-alt"></i>
-                <div class="icon-label">CSS</div>
-            </div>
-            <div>
-                <i class="fab fa-js"></i>
-                <div class="icon-label">JavaScript</div>
-            </div>
-            <div>
-                <i class="fab fa-react"></i>
-                <div class="icon-label">React</div>
-            </div>
-            <!-- Design Icons -->
-            <div>
-                <i class="fas fa-paint-brush"></i>
-                <div class="icon-label">Adobe</div>
-            </div>
-            
-            <div>
-                <i class="fab fa-figma"></i>
-                <div class="icon-label">Figma</div>
-            </div>
-            <!-- Video Editing Icons -->
-            <div>
-                <i class="fas fa-video"></i>
-                <div class="icon-label">Davinci Resolve</div>
-            </div>
-        </div>
-        
-        <!-- Resume Link Section -->
-        <div class="mt-5">
-            <h3 style="font-family: MODERNIZ;">My Resume</h3>
-            <a href="https://docs.google.com/document/d/1B6GEPWF9PwMsbQVYRq9CxB3txjbKZH9s/edit" target="_blank" class="btn btn-success">Click Here to View!</a>
-        </div>
-    </section>
-    
-    <footer class="bg-dark text-light py-3"></footer>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="photography.html">Media</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
 
-    <script>
-        // Create and add the custom cursor element to the page
-        const cursor = document.createElement('div');
-        cursor.classList.add('cursor');
-        document.body.appendChild(cursor);
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-text" data-aos="fade-right">
+    <h1>Hi, my name is Emme Pellot!</h1>
+<p>I am a Digital Media professional who uses marketing and technical skills to produce high-quality content that inspires and engages with diverse audiences.</p>
+  </div>
+  <img src="assets/img/emme.JPEG" alt="Your Photo" class="profile-img" data-aos="fade-left">
+</header>
 
-        // Move the custom cursor with the mouse
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = `${e.pageX}px`;
-            cursor.style.top = `${e.pageY}px`;
-        });
+<!-- ABOUT ME -->
+<section class="about-section" data-aos="fade-up">
+  <div class="main-header">About Me</div>
 
-        // Enlarge the cursor when hovering over clickable elements
-        const clickableElements = document.querySelectorAll('a, button, .icon-grid i');
+  <div class="about-item" data-aos="fade-right">
+  <div class="about-item-icon">
+    <img src="assets/img/ucf-logo.png" alt="UCF Logo" style="width:150px; height:auto;"></div>
+    <div class="about-item-text">I earned my Bachelor’s degree in Digital Media with a minor in Mass Media from the University of Central Florida, gaining a wide understanding of web development, journalism, media production, and storytelling across multiple formats.</div>
+  </div>
 
-        clickableElements.forEach((el) => {
-            el.addEventListener('mouseenter', () => {
-                cursor.classList.add('cursor-hover');
-            });
-            el.addEventListener('mouseleave', () => {
-                cursor.classList.remove('cursor-hover');
-            });
-        });
-    </script>
+  <div class="about-item" data-aos="fade-left">
+    <div class="about-item-icon">
+    <img src="assets/img/sony.png" alt="Sony Logo" style="width:100px; height:auto;"></div>
+    <div class="about-item-text">I independently film and edit various styles of video, managing post-production and color grading. My work has garnered over 8.8 million views on TikTok and was featured on Sony Alpha’s official account.</div>
+  </div>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <div class="about-item" data-aos="fade-right">
+    <div class="about-item-icon">
+    <img src="assets/img/htmlcssjspslr.png" alt="Logo" style="width:100px; height:auto;"></div>
+    <div class="about-item-text">I am experienced in web development including HTML, CSS, and JS, and I am well-versed in various graphic design tools such as Adobe Photoshop. </div>
+  </div>
+
+  <div class="about-item" data-aos="fade-left">
+    <div class="about-item-icon"><i class="fas fa-globe-americas"></i></div>
+    <div class="about-item-text">Travel and sports are constant sources of inspiration for me, helping me approach every project with creativity, energy, and purpose. </div>
+  </div>
+
+</section>
+
+<!-- ICON GRID -->
+<section class="icon-grid" data-aos="fade-up">
+  <div class="icon-item"><i class="fab fa-html5"></i><div class="icon-label">HTML</div></div>
+  <div class="icon-item"><i class="fab fa-css3-alt"></i><div class="icon-label">CSS</div></div>
+  <div class="icon-item"><i class="fab fa-js"></i><div class="icon-label">JavaScript</div></div>
+  <div class="icon-item"><i class="fab fa-react"></i><div class="icon-label">React</div></div>
+  <div class="icon-item"><i class="fas fa-paint-brush"></i><div class="icon-label">Adobe</div></div>
+  <div class="icon-item"><i class="fab fa-figma"></i><div class="icon-label">Figma</div></div>
+  <div class="icon-item"><i class="fas fa-video"></i><div class="icon-label">Davinci Resolve Studio</div></div>
+</section>
+
+<!-- RESUME -->
+<div class="main-header" data-aos="fade-up">
+  <h3 style="font-family: MODERNIZ; font-size: 36px;">My Resume</h3>
+  <a href="https://docs.google.com/document/d/1B6GEPWF9PwMsbQVYRq9CxB3txjbKZH9s/edit" target="_blank" class="btn btn-success resume-btn">
+    <i class="fas fa-file-alt"></i> Click Here to View!
+  </a>
+</div>
+<footer> </footer>
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000, once:true});
+
+// Navbar scroll effect
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', ()=> {
+  if(window.scrollY > 50) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
+
+// Custom cursor
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+document.querySelectorAll('a, button, .icon-item').forEach(el=>{
+  el.addEventListener('mouseenter', ()=>cursor.classList.add('cursor-hover')); 
+  el.addEventListener('mouseleave', ()=>cursor.classList.remove('cursor-hover'));
+});
+</script>
 </body>
+</html>

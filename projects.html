@@ -1,388 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- AOS for animation on scroll -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Coolvetica';
-      background-color: #f8f9fa;
-      cursor: none;
-    }
-    
-
-    .section-header {
-      text-align: center;
-      margin-top: 100px;
-      margin-bottom: 50px;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #333;
-      text-transform: uppercase;
-    }
-
-    /* General Project Layout */
-    .project-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 50px;
-      width: 100%;
-      padding-left: 45px; /* Add left padding */
-  padding-right: 45px; /* Add right padding */
-    }
-
-
-    .project-container img {
-      width: 50%; /* Image width */
-      max-width: 400px; /* Set max width for image */
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .project-description {
-      padding: 20px;
-      text-align: left;
-    }
-
-    /* Staggered Layout: Alternating the Flex Direction */
-    /* Text-Image for odd numbered projects */
-    .project-container:nth-child(odd) {
-      flex-direction: row; /* Text Image */
-    }
-
-    /* Image-Text for even numbered projects */
-    .project-container:nth-child(even) {
-      flex-direction: row-reverse; /* Image Text */
-    }
-
-    /* Landscape specific styling */
-    .landscape-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 50px;
-      flex-wrap: wrap;
-    }
-
-    .landscape-img {
-      width: 100%; /* Full width */
-      max-width: 1500px; /* Maximum width for large images */
-      height: auto; /* Maintain aspect ratio */
-      margin: 0 auto;
-    }
-
-    @media (max-width: 768px) {
-  .project-container {
-    flex-direction: column !important; /* Stack images and text on smaller screens */
-    text-align: center;
-  }
-
-  .project-container img {
-    width: 80%; /* Increase the image size */
-    max-width: 300px; /* Adjust maximum width for better visibility */
-  }
-
-  .project-description {
-    padding: 15px;
-    text-align: center;
-  }
-}
-
-    /* Add a new class to the landscape-container to make it staggered */
-    .landscape-container:nth-child(odd) {
-      flex-direction: row;
-    }
-
-    .landscape-container:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-    @font-face {
-            font-family:'MODERNIZ';
-            src: url('assets/Moderniz.otf');
-        }
-        @font-face {
-            font-family:'Coolvetica';
-            src: url('assets/Coolvetica.otf');
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: linear-gradient(to bottom, #536854, #2e4d38);
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-nav .nav-link {
-            font-size: 1.2rem;
-            color: white;
-            padding: 15px;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #000000; 
-        }
-        .navbar-brand {
-            color:white;
-        }
-       /* Custom cursor style */
+<style>
 body {
-  cursor: none; /* Hide the default cursor */
+  font-family: "Coolvetica", sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  font-size: 22px;
+}
+h3{
+  color: #385e43;
+  font-size: 38px;
 }
 
-.cursor {
-  position: absolute;
-  width: 30px; /* Adjust the size */
-  height: 30px; /* Adjust the size */
-  background-color: #536854; /* Custom color */
-  border-radius: 50%; /* Circular shape */
-  pointer-events: none; /* So it doesn't interfere with clicks */
-  transform: translate(-50%, -50%); /* Center the cursor on the mouse */
-  transition: all 0.05s ease; /* Faster transition */
-  z-index: 9999;
+/* --- HEADERS --- */
+.main-header { 
+  text-align:center; 
+  margin-top:100px; 
+  margin-bottom:10px; 
+  font-size:3.2rem; 
+  font-weight:700; 
+  color:#222; 
+  letter-spacing:2px; 
+  text-transform:uppercase; 
+  position:relative;
+}
+.main-header::after { 
+  content:""; 
+  display:block; 
+  width:60px; 
+  height:3px; 
+  background:#385e43; 
+  margin:14px auto 0; 
+  border-radius:2px;
+}
+.sub-header { 
+  text-align:center; 
+  margin-top:20px; 
+  margin-bottom:40px; 
+  font-size:1.9rem; 
+  font-weight:500; 
+  color:#385e43;
+}
+/* --- PROJECT LAYOUT --- */
+.project-container {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:50px;
+  width:100%;
+  gap:30px;
+}
+.project-container img {
+  width:50%;
+  max-width:500px;
+  border-radius:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+  cursor:pointer;
+}
+.project-container img:hover {
+  transform: scale(1.05);
+}
+.project-description {
+  padding:20px;
+  text-align:left;
+}
+.project-container:nth-child(even) {
+  flex-direction: row-reverse;
+}
+@media (max-width:768px) {
+  .project-container {
+    flex-direction:column !important;
+    text-align:center;
+  }
+  .project-container img {
+    width:80%;
+    max-width:350px;
+  }
 }
 
-.cursor-hover {
-  transform: translate(-50%, -50%) scale(1.2); /* Less scaling effect */
+/* --- NAVBAR --- */
+.navbar { 
+  position:fixed; 
+  top:0; 
+  left:0; 
+  width:100%; 
+  background:rgba(255,255,255,0.7); 
+  backdrop-filter:blur(10px); 
+  z-index:1000; 
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
-.graphics-line {
-  border: 0;
-  height: 3px; /* Thickness of the line */
-  background-color: #333; /* Dark color for clarity */
-  width: 50%; /* Set the width to be 50% of the container */
-  margin: 40px auto; /* Center the line horizontally with auto margin */
+.navbar-nav .nav-link { 
+  font-size:1.5rem; 
+  font-weight:500; 
+  color:#333; 
+  padding:15px; 
+  transition: color 0.2s ease;
+}
+.navbar-nav .nav-link:hover { 
+  color:#385e43;
+}
+.navbar-brand { 
+  font-weight:bold; 
+  color:#111;
+}
+
+/* --- MODALS --- */
+.modal-content { 
+  border-radius:10px; 
+  background:#111; 
+  color:#fff;
+}
+.modal-body img { 
+  border-radius:8px; 
+  width:100%; 
+  max-height:80vh; 
+  object-fit:contain;
+}
+.modal-header { 
+  border-bottom:none; 
 }
 /* Make carousel arrows black */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: black; /* Set arrow color to black */
+#modalFyreCarousel .carousel-control-prev-icon,
+#modalFyreCarousel .carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
 }
 
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-  background-color: #333; /* Darken the arrow color on hover */
+/* --- CUSTOM CURSOR --- */
+.cursor { 
+  position:fixed; 
+  top:0; 
+  left:0; 
+  width:28px; 
+  height:28px; 
+  border:2px solid #385e43; 
+  border-radius:50%; 
+  pointer-events:none; 
+  transform:translate(-50%,-50%); 
+  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, border-color 0.15s ease; 
+  z-index:9999;
 }
-.carousel-control-next {
-  right: 210px; /* Adjust this value to move the arrow closer to the image */
-}
-
-.carousel-control-prev {
-  left: -50px; /* Adjust this value to move the left arrow closer to the image */
-}
-.carousel-control-next {
-  width: auto;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-@media (max-width: 992px) { /* Adjust for tablets */
-  .carousel-control-prev {
-    left: 5vw; /* Adjust positioning */
-  }
-  .carousel-control-next {
-    right: 5vw;
-  }
+.cursor-hover { 
+  transform:translate(-50%,-50%) scale(1.5); 
+  border-color:#004d40; 
 }
 
-@media (max-width: 768px) { /* Adjust for mobile screens */
-  .carousel-control-prev {
-    left: 2vw;
-  }
-  .carousel-control-next {
-    right: 2vw;
-  }
-}
-  </style>
+@font-face { font-family:'MODERNIZ'; src:url('assets/Moderniz.otf'); }
+@font-face { font-family:'Coolvetica'; src:url('assets/Coolvetica.otf'); }
+</style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">EP</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="photography.html">Media</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <div class="container my-5">
-    <!-- Clickable Projects & Graphics Title -->
-    <div class="section-header" style="font-family: MODERNIZ;">
-      <a href="#graphics-section" style="text-decoration: none; color: inherit;">
-        Projects & Graphics
-      </a>
-    </div>
-    
- <!-- SIPS App Project (1st) -->
-<div class="project-container" data-aos="fade-up">
-  <div class="col-md-6">
-    <img src="assets/sipsmobileview-ezgif.com-cut.gif" alt="SIPS App Preview">
-  </div>
-  <div class="col-md-6 project-description">
-    <h3>SIPS</h3>
-    <p>SIPS is a community-based app for drink lovers to share reviews, discover hidden gems, and track their favorite coffee and beverage spots. Designed with social features and sleek UI, the app connects users through their passion for local cafés and creative drinks.</p>
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto" style="font-family: Coolvetica;">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="photography.html">Media</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
   </div>
 </div>
+</nav>
 
-<!-- Fyre Energy Drink Concept (2nd) -->
-<div class="project-container" data-aos="fade-right">
-  <div class="col-md-6">
-    <div id="fyreCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/graphics/fyre all.png" class="d-block w-100" alt="Fyre Image 1">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/graphics/fyre.png" class="d-block w-100" alt="Fyre Image 2">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/graphics/fyre lime.png" class="d-block w-100" alt="Fyre Image 3">
-        </div>
-        <div class="carousel-item">
-          <img src="assets/graphics/fyre arctic.png" class="d-block w-100" alt="Fyre Image 4">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#fyreCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#fyreCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+<div class="container my-5">
+  <div class="main-header" data-aos="fade-down" style="font-family: MODERNIZ;">Projects & Graphics</div>
+
+  <!-- SIPS App Project -->
+  <div class="project-container" data-aos="fade-up">
+    <img src="assets/sipsmobileview-ezgif.com-cut.gif" alt="SIPS App Preview" onclick="openModal('SIPS')">
+    <div class="project-description">
+      <h3>SIPS</h3>
+      <p>SIPS is a community-based app for drink lovers to share reviews, discover hidden gems, and track their favorite coffee and beverage spots. A team and I designed this app in <strong>Figma</strong> with social features and sleek UI. The app connects users through their passion for local cafés and creative drinks.</p>
     </div>
   </div>
-  <div class="col-md-6 project-description">
+<!-- Fyre Project -->
+<div class="project-container" data-aos="fade-up">
+  <div id="fyreCarouselPage" class="carousel slide" data-bs-ride="carousel" style="width:50%;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/graphics/fyre all.png" class="d-block w-100 rounded" alt="Fyre 1" onclick="openModal('Fyre')">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/graphics/fyre lime.png" class="d-block w-100 rounded" alt="Fyre 2" onclick="openModal('Fyre')">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/graphics/fyre arctic.png" class="d-block w-100 rounded" alt="Fyre 3" onclick="openModal('Fyre')">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/graphics/fyre ember cherry.png" class="d-block w-100 rounded" alt="Fyre 4" onclick="openModal('Fyre')">
+      </div>
+    </div>
+
+    <!-- Arrow controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#fyreCarouselPage" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:black; border-radius:50%; width:35px; height:35px;"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#fyreCarouselPage" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:black; border-radius:50%; width:35px; height:35px;"></span>
+    </button>
+  </div>
+
+  <div class="project-description" style="width:50%;">
     <h3>"Fyre" Energy Drink Concept</h3>
-    <p>I created a design concept for a new energy drink brand with three flavors in Adobe Photoshop. "Fyre" is a modern take on energy drinks with a bold identity. Designed to attract a crowd who moves with purpose, the brand embodies momentum and "fyre power".</p>
+    <p>I created a design concept for a new energy drink brand with three flavors in <strong>Adobe Photoshop</strong>. "Fyre" is a modern take on energy drinks with a bold identity.</p>
   </div>
 </div>
 
-<!-- Plannify (3rd) -->
-<div class="project-container" data-aos="fade-up">
-  <div class="col-md-6">
-    <img src="assets/plannify.gif" alt="Project Image">
+  <!-- Plannify -->
+  <div class="project-container" data-aos="fade-up">
+    <img src="assets/plannify.gif" alt="Plannify App" onclick="openModal('Plannify')">
+    <div class="project-description">
+      <h3>Plannify</h3>
+      <p>This is a modern planner app concept that was created in <strong>Figma</strong>. My team and I had an idea to create a healthy lifestyle planner app to keep track of your daily tasks, set goals, and improve organization skills!</p>
+    </div>
   </div>
-  <div class="col-md-6 project-description">
-    <h3>Plannify</h3>
-    <p>This is a modern planner app concept that was created in Figma. My team and I had an idea to create a healthy lifestyle planner app to keep track of your daily tasks, set goals, and improve organization skills!</p>
+
+  <!-- Daily Mail Redesign -->
+  <div class="project-container" data-aos="fade-up">
+    <img src="assets/dailymail.gif" alt="Daily Mail Redesign" onclick="openModal('DailyMail')">
+    <div class="project-description">
+      <h3>"The Daily Mail" Website Redesign</h3>
+      <p>I created a renovated mockup of The Daily Mail in <strong>Figma</strong> with the inclusion of an accessibility toolbar and overall less information overload. The purpose of this project was to make changes to a website that is not accessible to all.</p>
+    </div>
   </div>
+
+  <!-- Stephen Curry Graphic -->
+  <div class="project-container" data-aos="fade-up">
+    <img src="assets/graphics/currygraphic 2.png" alt="Stephen Curry Graphic" onclick="openModal('Curry')">
+    <div class="project-description">
+      <h3>Stephen Curry Olympics Graphic</h3>
+      <p>I created a social media graphic of NBA star Stephen Curry in <strong>Adobe Photoshop</strong> to celebrate the 2024 Mens Basketball Summer Olympics gold medal.</p>
+    </div>
+  </div>
+
+  <!-- Webflow Website Redesign -->
+  <div class="project-container" data-aos="fade-up">
+    <img src="assets/img/webflow redesign.png" alt="Webflow Redesign" onclick="openModal('Webflow')">
+    <div class="project-description">
+      <h3>Webflow Website Redesign</h3>
+      <p>I replicated an existing Webflow website using its template to further my understanding of the platform. Through this process, I gained a solid understanding of the main principles involved for website creation on <strong>Webflow</strong>.</p>
+    </div>
+  </div>
+
+  <!-- Exercise App -->
+  <div class="project-container" data-aos="fade-up">
+    <img src="assets/ezgif.com-crop.gif" alt="Exercise App" onclick="openModal('Exercise')">
+    <div class="project-description">
+      <h3>Exercise App</h3>
+      <p>This is an exercise app I created using <strong>React Native</strong> components such as FlatList and Navigation Stack. It includes a list of exercises and a timer or a rep counter based on the exercise of choice. The user can reset, pause, increase increment, and return to menu.</p>
+    </div>
+  </div>
+
+  <!-- Quiz App -->
+  <div class="project-container" data-aos="fade-up">
+    <img src="assets/phones-ezgif.com-resize.gif" alt="Quiz App" onclick="openModal('Quiz')">
+    <div class="project-description">
+      <h3>Quiz App</h3>
+      <p>For this app, I created a 3-question quiz using <strong>React Native</strong> that supports three types of answers. When answered all correctly, the summary shows all green answers. If answered any incorrectly, the answer will show as red.</p>
+    </div>
+  </div>
+
 </div>
 
-<!-- Daily Mail Redesign (4th) -->
-<div class="landscape-container" data-aos="fade-up">
-  <div class="col-md-6">
-    <img src="assets/dailymail.gif" alt="Project Image" class="landscape-img">
+<!-- PROJECT MODAL -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="projectModalLabel">Title</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
   </div>
-  <div class="col-md-6 project-description">
-    <h3>"The Daily Mail" Website Redesign</h3>
-    <p>I created a renovated mockup of The Daily Mail in Figma with the inclusion of an accessibility toolbar and overall less information overload. The purpose of this project was to make changes to a website that is not accessible to all.</p>
-  </div>
-</div>
-
-<!-- Stephen Curry Graphic (5th) -->
-<div class="project-container" data-aos="fade-right">
-  <div class="col-md-6">
-    <img src="assets/graphics/currygraphic copy.png" alt="Graphic Image 3">
-  </div>
-  <div class="col-md-6 project-description">
-    <h3>Stephen Curry Olympics Graphic</h3>
-    <p>I created a social media graphic of NBA star Stephen Curry in Adobe Photoshop to celebrate the 2024 Mens Basketball Summer Olympics gold medal.</p>
+  <div class="modal-body text-center">
+    <div id="modalContentArea"></div>
   </div>
 </div>
-
-<!-- Webflow Website Redesign (6th) -->
-<div class="landscape-container" data-aos="fade-up">
-  <div class="col-md-6">
-    <img src="assets/img/webflow redesign.png" alt="Project Image" class="landscape-img">
-  </div>
-  <div class="col-md-6 project-description">
-    <h3>Webflow Website Redesign</h3>
-    <p>I replicated an existing Webflow website using its template to further my understanding of the platform. Through this process, I gained a solid understanding of the main principles involved for website creation on Webflow.</p>
-  </div>
+</div>
 </div>
 
-<!-- Exercise App (8th) -->
-<div class="landscape-container" data-aos="fade-up">
-  <div class="col-md-6">
-    <img src="assets/ezgif.com-crop.gif" alt="Project Image" class="landscape-img">
-  </div>
-  <div class="col-md-6 project-description">
-    <h3>Exercise App</h3>
-    <p>This is an exercise app I created using React Native components such as FlatList and Navigation Stack. It includes a list of exercises and a timer or a rep counter based on the exercise of choice. The user can reset, pause, increase increment, and return to menu.</p>
-  </div>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000, once:true});
 
+// Fyre carousel images
+const fyreImages = ["assets/graphics/fyre all.png","assets/graphics/fyre lime.png","assets/graphics/fyre arctic.png","assets/graphics/fyre ember cherry.png"];
 
-<!-- Quiz App (10th) -->
-<div class="project-container" data-aos="fade-up">
-  <div class="col-md-6">
-    <img src="assets/phones-ezgif.com-resize.gif" alt="Project Image">
-  </div>
-  <div class="col-md-6 project-description">
-    <h3>Quiz App</h3>
-    <p>For this app, I created a 3-question quiz using React Native that supports three types of answers. When answered all correctly, the summary shows all green answers. If answered any incorrectly, the answer will show as red.</p>
-  </div>
-</div>
+function openModal(projectKey){
+  const modal = new bootstrap.Modal(document.getElementById('projectModal'));
+  const modalContentArea = document.getElementById('modalContentArea');
+  modalContentArea.innerHTML = ""; // clear previous content
 
+  if(projectKey === 'Fyre'){
+    const carousel = document.createElement('div');
+    carousel.classList.add('carousel','slide');
+    carousel.id = 'modalFyreCarousel';
+    carousel.setAttribute('data-bs-ride','carousel');
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS for animations -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
+    const inner = document.createElement('div');
+    inner.classList.add('carousel-inner');
+
+    fyreImages.forEach((src,i)=>{
+      const item = document.createElement('div');
+      item.classList.add('carousel-item');
+      if(i===0) item.classList.add('active'); // first item active
+      const img = document.createElement('img');
+      img.src = src;
+      img.classList.add('d-block','w-100','rounded');
+      item.appendChild(img);
+      inner.appendChild(item);
     });
-// Create and add the custom cursor element to the page
-const cursor = document.createElement('div');
-cursor.classList.add('cursor');
+
+    carousel.appendChild(inner);
+
+    // Controls
+    carousel.innerHTML += `
+      <button class="carousel-control-prev" type="button" data-bs-target="#modalFyreCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#modalFyreCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    `;
+
+    modalContentArea.appendChild(carousel);
+
+    const desc = document.createElement('p');
+    desc.innerText = 'Design concept for a bold, modern energy drink with three flavors.';
+    modalContentArea.appendChild(desc);
+
+    document.getElementById('projectModalLabel').innerText = '"Fyre" Energy Drink Concept';
+  } else {
+    const images = { "SIPS":"assets/sipsmobileview-ezgif.com-cut.gif",
+                     "Plannify":"assets/plannify.gif",
+                     "DailyMail":"assets/dailymail.gif",
+                     "Curry":"assets/graphics/currygraphic 2.png",
+                     "Webflow":"assets/img/webflow redesign.png",
+                     "Exercise":"assets/ezgif.com-crop.gif",
+                     "Quiz":"assets/phones-ezgif.com-resize.gif" };
+    const img = document.createElement('img');
+    img.src = images[projectKey];
+    img.classList.add('img-fluid');
+    modalContentArea.appendChild(img);
+
+    const descText = {
+      "SIPS":"Community-based app for drink lovers, discover hidden gems, and track favorite beverages.",
+      "Plannify":"Planner app to keep track of daily tasks and goals.",
+      "DailyMail":"Mockup of The Daily Mail with improved accessibility and reduced information overload.",
+      "Curry":"Social media graphic celebrating 2024 Olympics gold medal.",
+      "Webflow":"Replicated an existing Webflow website to understand platform principles.",
+      "Exercise":"React Native exercise app with timers and rep counters.",
+      "Quiz":"React Native quiz app with answer validation."
+    };
+    const desc = document.createElement('p');
+    desc.innerText = descText[projectKey];
+    modalContentArea.appendChild(desc);
+
+    const titles = {
+      "SIPS":"SIPS App","Plannify":"Plannify","DailyMail":"Daily Mail Redesign",
+      "Curry":"Stephen Curry Graphic","Webflow":"Webflow Redesign","Exercise":"Exercise App","Quiz":"Quiz App"
+    };
+    document.getElementById('projectModalLabel').innerText = titles[projectKey];
+  }
+
+  modal.show();
+}
+
+// Custom cursor
+const cursor=document.createElement('div'); 
+cursor.classList.add('cursor'); 
 document.body.appendChild(cursor);
-
-// Set the custom cursor style
-cursor.style.cursor = 'url("path-to-your-cursor-image.png"), auto';  // Use your custom cursor image URL here
-
-// Move the custom cursor with the mouse
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = `${e.pageX}px`;
-  cursor.style.top = `${e.pageY}px`;
+document.addEventListener('mousemove', e=>{ cursor.style.left=e.clientX+'px'; cursor.style.top=e.clientY+'px'; });
+document.querySelectorAll('a, button, .project-container img').forEach(el=>{
+  el.addEventListener('mouseenter', ()=>cursor.classList.add('cursor-hover')); 
+  el.addEventListener('mouseleave', ()=>cursor.classList.remove('cursor-hover'));
 });
-
-// Enlarge the cursor when hovering over clickable elements
-const clickableElements = document.querySelectorAll('a, button, .project-container, .icon-grid i');
-
-clickableElements.forEach((el) => {
-  el.addEventListener('mouseenter', () => {
-    cursor.classList.add('cursor-hover');
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.classList.remove('cursor-hover');
-  });
-});
-
-  </script>
+</script>
 </body>
 </html>

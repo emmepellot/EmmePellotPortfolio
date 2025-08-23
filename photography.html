@@ -140,8 +140,8 @@
   </nav>
 
   <div class="container my-5">
-    <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;">Media</div>
-    <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;font-size: 18px;">Photos</div>
+    <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;text-decoration: underline;">Media</div>
+    <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;font-size: 25px;">Photos</div>
 
     <div class="row g-4 justify-content-center">
       <!-- Photo 1 -->
@@ -235,72 +235,90 @@
     </div>
   </div>
 
-  <!-- Video Section -->
-  <div class="container my-5">
-    <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;">Videos</div>
+ <!-- Video Section -->
+<div class="container my-5">
+  <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;">Videos</div>
 
-    <div class="row g-4 justify-content-center">
-      <!-- Video 1 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="photo-item">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/1kKRDWRCEm8" title="life" allowfullscreen></iframe>
-          </div>
-          <div class="photo-description"><h5>how are you going to spend your life?</h5></div>
-        </div>
+  <div class="row g-4 justify-content-center">
+    <!-- Video 1 -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="photo-item" onclick="openVideo('1kKRDWRCEm8', 'how are you going to spend your life?')">
+        <img src="https://img.youtube.com/vi/1kKRDWRCEm8/hqdefault.jpg" alt="Video Thumbnail">
+        <div class="photo-description"><h5>how are you going to spend your life?</h5></div>
       </div>
+    </div>
 
-      <!-- Video 2 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="photo-item">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/ck1mS2yNBlY" title="magic kingdom" allowfullscreen></iframe>
-          </div>
-          <div class="photo-description"><h5>mid july at magic kingdom</h5></div>
-        </div>
+    <!-- Video 2 -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="photo-item" onclick="openVideo('ck1mS2yNBlY', 'mid july at magic kingdom')">
+        <img src="https://img.youtube.com/vi/ck1mS2yNBlY/hqdefault.jpg" alt="Video Thumbnail">
+        <div class="photo-description"><h5>mid july at magic kingdom</h5></div>
       </div>
+    </div>
 
-      <!-- Video 3 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="photo-item">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/f0JPio_eCIk" title="coney island" allowfullscreen></iframe>
-          </div>
-          <div class="photo-description"><h5>summer sunset at coney island</h5></div>
-        </div>
+    <!-- Video 3 -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="photo-item" onclick="openVideo('f0JPio_eCIk', 'summer sunset at coney island')">
+        <img src="https://img.youtube.com/vi/f0JPio_eCIk/hqdefault.jpg" alt="Video Thumbnail">
+        <div class="photo-description"><h5>summer sunset at coney island</h5></div>
       </div>
+    </div>
 
-      <!-- Video 4 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="photo-item">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/a5ZqKVrdNb0" title="Animal Kingdom" allowfullscreen></iframe>
-          </div>
-          <div class="photo-description"><h5>animal kingdom</h5></div>
-        </div>
+    <!-- Video 4 -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+      <div class="photo-item" onclick="openVideo('a5ZqKVrdNb0', 'animal kingdom')">
+        <img src="https://img.youtube.com/vi/a5ZqKVrdNb0/hqdefault.jpg" alt="Video Thumbnail">
+        <div class="photo-description"><h5>animal kingdom</h5></div>
       </div>
+    </div>
 
-      <!-- Video 5 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-        <div class="photo-item">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/araX0jlb1rk" title="new york city sunset skyline" allowfullscreen></iframe>
-          </div>
-          <div class="photo-description"><h5>new york city sunset skyline</h5></div>
-        </div>
+    <!-- Video 5 -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+      <div class="photo-item" onclick="openVideo('araX0jlb1rk', 'new york city sunset skyline')">
+        <img src="https://img.youtube.com/vi/araX0jlb1rk/hqdefault.jpg" alt="Video Thumbnail">
+        <div class="photo-description"><h5>new york city sunset skyline</h5></div>
       </div>
+    </div>
 
-      <!-- Video 6 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-        <div class="photo-item">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/zdszD9bxato" title="follow your dreams" allowfullscreen></iframe>
-          </div>
-          <div class="photo-description"><h5>follow your dreams</h5></div>
+    <!-- Video 6 -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+      <div class="photo-item" onclick="openVideo('zdszD9bxato', 'follow your dreams')">
+        <img src="https://img.youtube.com/vi/zdszD9bxato/hqdefault.jpg" alt="Video Thumbnail">
+        <div class="photo-description"><h5>follow your dreams</h5></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="videoModalLabel">Video Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="stopVideo()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="ratio ratio-16x9">
+          <iframe id="videoFrame" src="" title="Video Player" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<script>
+  function openVideo(videoId, title) {
+    document.getElementById('videoModalLabel').innerText = title;
+    document.getElementById('videoFrame').src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+    var modal = new bootstrap.Modal(document.getElementById('videoModal'));
+    modal.show();
+  }
+
+  function stopVideo() {
+    document.getElementById('videoFrame').src = "";
+  }
+</script>
 
 
   <!-- Bootstrap JS -->

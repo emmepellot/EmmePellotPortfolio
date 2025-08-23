@@ -1,189 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- AOS for animation on scroll -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Emme Pellot</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+body {
+  font-family: "Coolvetica", sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  cursor: none;
+  color: #222;
+}
+a { text-decoration:none; }
 
-  <style>
-    body {
-        cursor: none;
-      font-family: "Coolvetica";
-      background-color: #f8f9fa;
-    }
+/* --- NAVBAR --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+}
+.navbar.scrolled {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  backdrop-filter: blur(20px);
+}
+.navbar-nav .nav-link {
+  font-size: 1.5rem;
+  font-weight:500;
+  color:#333;
+  padding:15px;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover { color:#385e43; }
+.navbar-brand { font-weight:bold; font-family: Coolvetica; font-size:1.5rem; color:#111; }
 
-    .section-header {
-      text-align: center;
-      margin-top: 100px; /* Account for fixed navbar */
-      margin-bottom: 30px;
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #333;
-      text-transform: uppercase;
-    }
-
-    .contact-container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 30px;
-      background-color: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .contact-form input, .contact-form textarea {
-      margin-bottom: 20px;
-      padding: 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    .contact-form button {
-      background-color: #536854;
-      color: white;
-      font-size: 1.1rem;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      background-color: #2e4d38;
-    }
-
-    .contact-info {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    .contact-info a {
-      color: #536854;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(to bottom, #536854, #2e4d38);
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 1.2rem;
-        color: white;
-        padding: 15px;
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: #000000; 
-    }
-
-    .navbar-brand {
-        color:white;
-    }
-
-    .cursor {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      background-color: #536854;
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      transition: all 0.05s ease;
-      z-index: 9999;
-    }
-
-    .cursor-hover {
-      transform: translate(-50%, -50%) scale(1.2);
-    }
-    @font-face {
-    font-family: 'Coolvetica';
-    src: url('assets/Coolvetica.otf') format('opentype');
+/* --- HERO --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 60vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #a0bca3 100%);
+  text-align: center;
+  gap: 60px; /* more space between text and image */
 }
 
-@font-face {
-    font-family: 'MODERNIZ';
-    src: url('assets/Moderniz.otf') format('opentype');
+.hero-text {
+  flex: 1 1 300px;
+  max-width: 500px; /* limit width so paragraph wraps nicely */
+  padding: 10px 20px;
 }
 
-  </style>
+.hero-text h1 {
+  font-family: MODERNIZ;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #202020;
+  margin: 0 auto;
+}
+
+/* Profile image */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 20px; /* ensures it’s not flush against text */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* --- MAIN HEADER --- */
+.main-header { 
+  font-family:"MODERNIZ";
+  text-align:center;
+  margin:60px 0 40px 0;
+  font-size:2.8rem;
+  font-weight:700;
+  letter-spacing:1px;
+  position:relative;
+  color:#222;
+}
+.main-header::after {
+  content:"";
+  display:block;
+  width:70px;
+  height:3px;
+  background:#385e43;
+  margin:15px auto 0;
+  border-radius:2px;
+}
+
+/* --- CONTACT FORM --- */
+.contact-section {
+  max-width:700px;
+  margin:auto;
+  padding:20px;
+}
+.contact-info {
+  text-align:center;
+  margin-bottom:50px;
+}
+.contact-info a {
+  color:#385e43;
+  text-decoration:none;
+  font-size:1.2rem;
+}
+.contact-form {
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.contact-form input, .contact-form textarea {
+  padding:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:1rem;
+}
+.contact-form button {
+  background-color:#385e43;
+  color:white;
+  font-size:1.1rem;
+  padding:12px;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+}
+.contact-form button:hover { background-color:#2e4d38; }
+.contact-btn {
+  font-size: 1.5rem;          /* Bigger text */
+  padding: 20px 40px;         /* More padding for a bigger button */
+  border-radius: 50px;        /* Rounded corners */
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #2e4d38;  /* Darker hover color */
+  transform: scale(1.05);     /* Slight grow effect */
+}
+
+/* --- CUSTOM CURSOR --- */
+.cursor {
+  position:fixed;
+  top:0;
+  left:0;
+  width:28px;
+  height:28px;
+  border:2px solid #385e43;
+  border-radius:50%;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease, border-color 0.15s ease;
+  z-index:9999;
+}
+.cursor-hover {
+  transform:translate(-50%,-50%) scale(1.5);
+  border-color:#004d40;
+}
+
+/* --- MEDIA --- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;  /* image above text */
+    align-items: center;             /* center horizontally */
+    justify-content: flex-start;     /* start from top */
+    padding-top: 80px;               /* space for navbar */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    gap: 15px;                       /* small gap between image and text */
+  }
+
+  .hero-text {
+    max-width: 90%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    margin: 0;
+  }
+
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1.1rem; }
+}
+</style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-        <a class="navbar-brand" href="index.html" style="font-family: Coolvetica;">EP</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto" style="font-family: Coolvetica;">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="photography.html">Media</a></li>
-            </ul>
-        </div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="photography.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
-  </nav>
-
-  <div class="section-header" data-aos="fade-down" style="font-family: MODERNIZ;">Contact Me</div>
-  <div class="contact-info">
-    <p>Email: <a href="mailto:emmepellot@gmail.com">emmepellot@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/emmepellot" target="_blank">github.com/emmepellot</a></p>
   </div>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS for animations -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-    });
+</nav>
 
-    // Create and add the custom cursor element to the page
-    const cursor = document.createElement('div');
-    cursor.classList.add('cursor');
-    document.body.appendChild(cursor);
+<!-- HERO -->
+<header class="hero" data-aos="fade-down">
+  <div class="hero-text">
+    <h1>Contact Me</h1>
+  <p>For collaboration, project inquiries, or professional opportunities, please don’t hesitate to reach out.</p>
+  </div>
+  <img src="assets/img/emme.JPEG" alt="Emme Pellot" class="profile-img" data-aos="fade-left">
+</header>
 
-    // Set the custom cursor style
-    cursor.style.cursor = 'url("path-to-your-cursor-image.png"), auto';
+<!-- CONTACT INFO -->
+<section class="contact-section" data-aos="fade-up">
+  <div class="cta-contact" data-aos="fade-up" style="text-align:center; margin-top:50px;">
+    <a href="mailto:emmepellot@gmail.com" class="btn btn-success contact-btn">
+      Email Me Here
+    </a>
+  </div>
+</section>
 
-    // Move the custom cursor with the mouse
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = `${e.pageX}px`;
-      cursor.style.top = `${e.pageY}px`;
-    });
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
 
-    // Enlarge the cursor when hovering over clickable elements
-    const clickableElements = document.querySelectorAll('a, button, .project-container, .icon-grid i');
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000, once:true});
 
-    clickableElements.forEach((el) => {
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('cursor-hover');
-      });
-      el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('cursor-hover');
-      });
-    });
-  </script>
+// Navbar scroll effect
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', ()=> {
+  if(window.scrollY > 50) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
+
+// Custom cursor
+const cursor=document.querySelector('.cursor'); 
+document.addEventListener('mousemove', e=>{ cursor.style.left=e.clientX+'px'; cursor.style.top=e.clientY+'px'; });
+document.querySelectorAll('a, button, input, textarea').forEach(el=>{
+  el.addEventListener('mouseenter', ()=>cursor.classList.add('cursor-hover')); 
+  el.addEventListener('mouseleave', ()=>cursor.classList.remove('cursor-hover'));
+});
+</script>
 </body>
 </html>

@@ -30,10 +30,21 @@
     text-align: center;
     margin-top: 100px; /* Account for fixed navbar */
     margin-bottom: 10px;
-    font-size: 3.5rem; /* Larger than section-header */
+    font-size: 3.5rem; 
     font-weight: bold;
     color: #333;
     text-transform: uppercase;
+    position: relative;
+    }
+
+    .main-header::after {
+    content: "";
+    display: block;
+    width: 60px;     
+    height: 3px;            
+    background: #333;     
+    margin: 12px auto 0;    
+    border-radius: 2px;      
     }
 
     .sub-header {
@@ -157,8 +168,8 @@
     </div>
   </nav>
 
- <div class="container my-5">
-  <div class="main-header" data-aos="fade-down" style="font-family: MODERNIZ;text-decoration: underline;">
+<div class="container my-5">
+  <div class="main-header" data-aos="fade-down" style="font-family: MODERNIZ;">
     Media
   </div>
   <div class="sub-header" data-aos="fade-down" style="font-family: MODERNIZ;">
